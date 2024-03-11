@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielstreit/shamir-bip39"
+    "url": "https://github.com/c98tristan/shamir-bip39"
   },
   "engines": {
     "node": ">=10"
@@ -37,7 +37,7 @@
     "trailingComma": "es5"
   },
   "name": "shamir-bip39",
-  "author": "Daniel Streit",
+  "author": "Tristan",
   "module": "dist/shamir-bip39.esm.js",
   "jest": {
     "coverageThreshold": {

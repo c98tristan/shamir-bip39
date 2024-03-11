@@ -14,7 +14,14 @@ export function splitHex(secret: string, numShares: number, threshold: number) {
     .map(s => {
       const randomValues = Array(threshold - 1)
         .fill(0)
-        .map(() => randomBytes(1))
+        .map(() => {
+          while (true) {
+            let byte = randomBytes(1);
+            if (byte.toString('hex') !== '00') {
+              return byte;
+            }
+          }
+        })
         .map(buf => buf.toString('hex'))
         .map(v => parseInt(v, 16));
 
